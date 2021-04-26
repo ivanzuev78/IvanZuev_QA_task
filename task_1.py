@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 from shutil import copy
 from pathlib import Path
 
-root = ET.parse('config_2.xml').getroot()
+root = ET.parse('config.xml').getroot()
 for file in root:
     destination_path = Path(file.attrib['destination_path'])
     source_path = Path(file.attrib['source_path'])
