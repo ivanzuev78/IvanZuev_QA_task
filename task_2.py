@@ -14,7 +14,7 @@ def my_hash_checker(file_name: str, dir_to_check: str) -> None:
     hashes_funcs = {"md5": hashlib.md5, "sha1": hashlib.sha1, "sha256": hashlib.sha256}
 
     with open(file_name, "r") as file:
-        all_rows = [i.split() for i in file]
+        all_rows = [row.split() for row in file]
 
     for row in all_rows:
         if not exists(Path(dir_to_check, row[0])):
